@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doações - Mãos que Ajudam</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>💚 Doações Recebidas</h1>
+        <p>Confira as doações registradas no sistema.</p>
+    </header>
+
+    <main>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Valor</th>
+                    <th>Campanha</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for doacao in doacoes %}
+                <tr>
+                    <td>{{ doacao[0] }}</td>
+                    <td>{{ doacao[1] }}</td>
+                    <td>R$ {{ doacao[2] }}</td>
+                    <td>{{ doacao[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br>
+
+        <a href="/doar">← Voltar para Doações</a>
+
+    </main>
+
+</body>
+
+</html>

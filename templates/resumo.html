@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resumo - Mãos que Ajudam</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>💚 Resumo das Doações</h1>
+        <p>Confira os resultados das doações recebidas.</p>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h2>📊 Resumo</h2>
+
+            <p>
+                <strong>Total de doações:</strong>
+                {{ total_doacoes }}
+            </p>
+
+            <p>
+                <strong>Valor total arrecadado:</strong>
+                R$ {{ valor_total }}
+            </p>
+        </div>
+
+        <br>
+
+       <a href="/doacoes">← Ver todas as doações</a>
+<br><br>
+<a href="/">🏠 Voltar ao Início</a>
+    </main>
+
+<footer>
+    <p>© 2026 Mãos que Ajudam</p>
+</footer>
+
+</body>
+
+</html>
